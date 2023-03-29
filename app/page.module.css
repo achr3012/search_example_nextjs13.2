@@ -1,0 +1,155 @@
+.mainHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mainHeader > a {
+  font-size: 1.333rem;
+  font-weight: bold;
+  color: #fff;
+  background: #1db954;
+  padding: 7px 1rem;
+  border-radius: 1rem;
+  transition: background-color 0.2s ease-in;
+}
+
+.mainHeader > a:hover {
+  background-color: #1c753b;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+.searchInput {
+  padding: 14px;
+  width: 66%;
+  font-size: 1.133em;
+  text-align: center;
+  border-radius: 2rem;
+  outline: none;
+  border: 3px solid #fff;
+  color: #1db954;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.searchInput:focus {
+  border-color: #1db954;
+  font-weight: bold;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.postsBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.postsBox h1 {
+  color: #1db954;
+  letter-spacing: 1px;
+}
+
+.post {
+  display: flex;
+}
+
+.postThumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.3rem;
+}
+
+.postThumb div {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(29, 185, 84, 0.666);
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(255, 255, 255, 0.9);
+}
+
+.postThumb div:hover {
+  color: rgb(255, 255, 255);
+}
+
+.postBody {
+  padding: 1rem 0;
+}
+
+.postBody h3 a {
+  padding: 6px 0;
+  letter-spacing: 1px;
+  transition: color ease-in 0.2s;
+}
+
+.postBody h3 a:hover {
+  color: #1db954;
+}
+
+.postBody p {
+  color: rgb(255, 255, 255, 0.666);
+}
+
+.errorBox {
+  padding: 1px;
+}
+
+.errorMsg {
+  padding: 1.333rem 6rem 1.333rem 1.333rem;
+  background-color: #9d0f0f;
+  color: #fff;
+  font-weight: bold;
+  margin: 1rem 0 2rem;
+  border-radius: 2rem;
+  width: max-content;
+  letter-spacing: 1px;
+}
+
+.secondBtn {
+  background-color: #fff;
+  color: rgb(0 0 0 / 80%);
+  border-radius: 2rem;
+  padding: 4px 10px;
+  font-weight: bold;
+  margin-left: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.secondBtn:hover {
+  background-color: rgb(255, 255, 255, 0.8);
+  color: rgb(0 0 0 / 66%);
+}
+
+.postDesc a {
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.postDesc a:hover {
+  text-decoration: underline;
+}
+
+.postDesc span {
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.postContent {
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: rgb(255, 255, 255, 0.95);
+}
