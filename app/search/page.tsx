@@ -25,7 +25,7 @@ export default async function Search(
   let query = searchParams.q;
 
   if (!query) {
-    throw new Error("The url you entred is invalid, please check it and try again!");
+    return <p>The url you entred is invalid, please check it and try again!</p>
   }
 
   query = encodeURI(query.trim());

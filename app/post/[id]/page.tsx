@@ -49,7 +49,7 @@ export default async function Post({ params }: { params: { id: number } }) {
   const { id } = params;
 
   if (isNaN(id)) {
-    throw new Error("The url you entred is invalid, please check it and try again!");
+    return <p>The url you entred is invalid, please check it and try again!</p>
   }
 
   const post = await fetchPostById(id, {
