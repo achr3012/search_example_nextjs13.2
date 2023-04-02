@@ -153,3 +153,9 @@
   line-height: 1.8;
   color: rgb(255, 255, 255, 0.95);
 }
+
+.searchLoading {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+}
