@@ -17,7 +17,7 @@ function Posts({ query }: { query: string }) {
 
   const { data: posts, isLoading, error } = useSWR(`http://localhost:3000/api/search?q=${query}`, searchPostsFetcher);
 
-  if (error) return <div>failed to load</div>
+  if (error) return <div>failed to load:: {error}</div>
   if (isLoading) return (
     <div className={styles.searchLoading}>
       <SyncLoader
