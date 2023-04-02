@@ -47,14 +47,16 @@
   margin: 0 auto;
 }
 
-.postsBox {
+.mainContainer {
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
 }
 
-.postsBox h1 {
+.mainContainer h1 {
   color: #1db954;
   letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
 .post {

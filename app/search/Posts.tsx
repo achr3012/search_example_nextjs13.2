@@ -15,9 +15,7 @@ interface PostType { id: number, title: string, content: string, author: User }
 
 function Posts({ query }: { query: string }) {
 
-
   const { data: posts, isLoading, error } = useSWR(`http://localhost:3000/api/search?q=${query}`, searchPostsFetcher);
-
 
   if (error) return <div>failed to load</div>
   if (isLoading) return (

@@ -8,11 +8,9 @@ export default async function Page(
 
   let query = searchParams.q;
 
-  if (!query) {
-    return <p>The url you entred is invalid, please check it and try again!</p>
+  if (query) {
+    query = encodeURI(query.trim())
   }
-
-  query = encodeURI(query.trim());
 
   return (
     <>

@@ -27,7 +27,7 @@ export default function RootLayout({
             <Link href="/">Home</Link>
             <SearchInput />
           </header>
-          <div className={styles.postsBox}>
+          <div className={styles.mainContainer}>
             {children}
           </div>
         </div>
