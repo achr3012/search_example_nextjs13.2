@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.mainHeader > a {
+.homeButton {
   font-size: 1.333rem;
   font-weight: bold;
   color: #fff;
@@ -14,7 +14,7 @@
   transition: background-color 0.2s ease-in;
 }
 
-.mainHeader > a:hover {
+.homeButton:hover {
   background-color: #1c753b;
 }
 
@@ -33,6 +33,7 @@
   border-radius: 2rem;
   outline: none;
   border: 3px solid #fff;
+  background-color: #333;
   color: #1db954;
   transition: border-color 0.2s ease-in-out;
 }
@@ -70,7 +71,7 @@
   padding: 0 1.3rem;
 }
 
-.postThumb div {
+.postThumb a {
   width: 50px;
   height: 50px;
   background-color: rgb(29, 185, 84, 0.666);
@@ -85,7 +86,7 @@
   color: rgb(255, 255, 255, 0.9);
 }
 
-.postThumb div:hover {
+.postThumb a:hover {
   color: rgb(255, 255, 255);
 }
 
@@ -160,4 +161,45 @@
   display: flex;
   justify-content: center;
   padding-top: 4rem;
+}
+
+.model {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.model > div {
+  background-color: #fff;
+  color: #000;
+  padding: 3rem 2rem;
+  width: 600px;
+}
+
+.model > div header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.model > div header .homeButton {
+  border: none;
+}
+
+.model > div header .otherAction {
+  background-color: transparent;
+  font-size: 1.1em;
+  color: rgb(0 0 0 / 0.666);
+  font-family: inherit;
+  border: none;
+}
+
+.model > div header .otherAction:hover {
+  color: #000;
+  text-decoration: dashed;
 }

@@ -1,6 +1,9 @@
 import { PrismaClient } from '@prisma/client';
 import Post from './components/Post';
 
+import { getServerSession } from 'next-auth'
+import { authOptions } from './api/auth/[...nextauth]/route';
+
 const prisma = new PrismaClient();
 
 const fetchPosts = async () => {
@@ -20,12 +23,16 @@ const fetchPosts = async () => {
 
 export default async function Home() {
 
+  const session = await getServerSession(authOptions);
+
   const posts = await fetchPosts();
 
   return (
     <>
+      <pre>{JSON.stringify(session)}</pre>
       <h1>Showing all posts: </h1>
-      {posts.map(post => <Post post={post} key={post.id} />)}
+      {posts.length ? posts.map(post => <Post post={post} key={post.id} />) : <p>No posts</p>}
+      { }
     </>
   )
 }

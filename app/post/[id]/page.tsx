@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import styles from '../../page.module.css';
+import getUsernameFromEmail from "@/app/libs/getUsernameFromEmail";
 
 const prisma = new PrismaClient();
 
@@ -62,8 +63,7 @@ export default async function Post({ params }: { params: { id: number } }) {
     notFound();
   }
 
-  const nameMatch = post.author.email.match(/^([^@]*)@/);
-  const username = nameMatch ? nameMatch[1] : null;
+  const username = getUsernameFromEmail(post.author.email);
 
   return (
     <div>

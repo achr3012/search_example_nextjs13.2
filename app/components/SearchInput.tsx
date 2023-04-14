@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import styles from '../page.module.css'
 
 
-
 function SearchInput() {
 
   const [searchTerm, setSearchTerm] = useState("");

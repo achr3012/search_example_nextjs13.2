@@ -10,6 +10,8 @@ export const metadata = {
 
 import { Signika } from 'next/font/google';
 import Link from 'next/link';
+import Providers from './components/Providers';
+import UserActions from './components/UserActions';
 
 const signika = Signika({ subsets: ['latin'] });
 
@@ -23,15 +25,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={signika.className}>
         <div className={styles.container}>
-          <header className={styles.mainHeader}>
-            <Link href="/">Home</Link>
-            <SearchInput />
-          </header>
-          <div className={styles.mainContainer}>
-            {children}
-          </div>
+          <Providers>
+            <header className={styles.mainHeader}>
+              <Link className={styles.homeButton} href="/">Home</Link>
+              <SearchInput />
+              <UserActions />
+            </header>
+            <div className={styles.mainContainer}>
+              {children}
+            </div>
+          </Providers>
         </div>
       </body>
-    </html>
+    </html >
   )
 }
