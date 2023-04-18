@@ -44,7 +44,7 @@
 }
 
 .container {
-  width: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -180,18 +180,19 @@
   color: #000;
   padding: 3rem 2rem;
   width: 600px;
+  border-radius: 10px;
 }
 
-.model > div header {
+.model > div header nav {
   display: flex;
   justify-content: space-between;
 }
 
-.model > div header .homeButton {
+.model > div header nav .homeButton {
   border: none;
 }
 
-.model > div header .otherAction {
+.model > div header nav .otherAction {
   background-color: transparent;
   font-size: 1.1em;
   color: rgb(0 0 0 / 0.666);
@@ -199,7 +200,69 @@
   border: none;
 }
 
-.model > div header .otherAction:hover {
+.model > div header nav .otherAction:hover {
   color: #000;
   text-decoration: dashed;
+}
+
+.model header div {
+  padding: 2rem 0;
+}
+
+.model header div h1 {
+  font-weight: normal;
+  color: #444;
+}
+
+.model header div p {
+  color: #555;
+  padding-top: 5px;
+}
+
+.model .register .group {
+  display: flex;
+  gap: 1rem;
+}
+
+.model .formGroup {
+  flex: .5;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.model .formGroup label {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+
+.labelFocus {
+  color: #1db954 !important;
+}
+
+.model .formGroup input {
+  padding: 10px;
+  font-family: inherit;
+  outline: none;
+  border: 2px solid #777;
+}
+
+.model .formGroup input:focus {
+  border-color: #1db954;
+}
+
+.model form .homeButton {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  margin: 1rem 0;
+}
+
+.model form p {
+  font-size: 14px;
+  color: #666;
 }
